@@ -1,0 +1,76 @@
+/* 
+Theme Name: SurfOn - Storefront Child Theme 
+Version: 1.0 
+Description: Sports boutique
+Author: Linnea Thifa
+Template: storefront 
+*/
+
+.site-logo-link {
+    display: inline-block;
+    left: 50%;
+    margin: 0 0 20px;
+    position: relative;
+    -webkit-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    z-index: 2;
+}
+
+@media (min-width: 768px){
+    .site-header .site-branding img {
+        height: auto;
+        max-width: 75px;
+        max-height: none;
+    }
+}
+
+@media (max-width: 767px){
+
+    .site-header .custom-logo-link img {
+        width: 100%;
+        max-width: 60px;
+    }
+}
+
+.page-template-template-homepage:not(.has-post-thumbnail) .site-main {
+    padding-top: 0.235801em;
+}
+
+.storefront-product-section {
+    margin-top: 1.5rem;
+}
+
+#secondary {
+    display: none;
+}
+#primary {
+   width: 100%;
+}
+
+.emp-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.emp-title{
+    padding-top: 2rem;
+}
+.employee-title{
+    text-align: center;
+    padding-bottom: 0.6rem;
+}
+.employee-info{
+    list-style-type: none;
+    padding-top: 2rem;
+    /*text-align: center;*/
+    width: 80%;
+}
+.employee-info li{
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+}
+b.employee-bullet {
+    color: #003568;
+}
