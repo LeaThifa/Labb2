@@ -1,0 +1,14 @@
+form {
+    margin-bottom: 1em !important;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+button.single_add_to_cart_button.button {
+    margin-left: 35%;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=tel], input[type=url], input[type=password], input[type=search], textarea, .input-text {
+    background-color: #f8f8f8 !important;
+}
+

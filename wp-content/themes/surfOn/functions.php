@@ -58,13 +58,28 @@ function surfOn_employees()
 add_action("init", "surfOn_employees");
 
 //Display all posts of employees on the page
-function cdxn_portfolio_post_type( $query ) {
+function surfOn_show_all_post( $query ) {
     if ( is_archive() ) {
         $query->set( 'posts_per_page', -1 );
         return;
     }
 }
-add_action( 'pre_get_posts', 'cdxn_portfolio_post_type', 1 );
+add_action( 'pre_get_posts', 'surfOn_show_all_post', 1 );
+
+
+//Remove storefront footer link "Built with Storefront and Wordpress"
+add_action( 'init', 'surfOn_remove_footer_credit', 10 );
+function surfOn_remove_footer_credit () {
+    remove_action( 'storefront_footer', 'storefront_credit', 20 );
+    add_action( 'storefront_footer', 'surfOn_storefront_credit', 20 );
+}
+function surfOn_storefront_credit() {
+    ?>
+    <div class="site-info">
+        &copy; <?php echo get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ); ?>
+    </div>
+    <?php
+}
 
 
    
